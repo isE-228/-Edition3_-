@@ -1,0 +1,26 @@
+/* [背词挑战精修] 轻卡片、清晰进度、复习标记与结果反馈。 */
+.challenge-progress-wrap{display:grid;gap:8px;margin:4px 0 18px}
+.challenge-progress{color:#b35f7b;font-size:12px;font-weight:900;letter-spacing:.04em}
+.challenge-progress-track{height:7px;overflow:hidden;border-radius:99px;background:#f6e6eb;box-shadow:inset 0 1px 2px #a85b7018}
+.challenge-progress-track i{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#f5a4bc,#df7295 65%,#e7b36d);box-shadow:0 0 12px #e9789a55;transition:width .35s cubic-bezier(.2,.8,.2,1)}
+.challenge-card{padding:24px!important;background:linear-gradient(150deg,#fffdfd,#fff7f8)!important;border:1px solid #f3dfe5!important;border-radius:26px!important;box-shadow:0 24px 70px #2f142b38,inset 0 1px #fff!important}
+.word-card,.quiz-card{padding:19px!important;border:1px solid #f0dfe3!important;border-radius:20px!important;background:linear-gradient(145deg,#fff,#fff8f6)!important;box-shadow:0 8px 24px #8656620c,inset 0 1px #fff!important}
+.word-main{font-size:clamp(29px,7vw,38px)!important;letter-spacing:-.045em;color:#7a4257!important}
+.word-meaning{font-size:17px!important;font-weight:850;color:#4e3942!important}
+.word-example{line-height:1.55!important;color:#725e65!important}
+.word-example-translation,.word-forms{line-height:1.5!important}
+.study-actions{display:grid;grid-template-columns:minmax(110px,.8fr) minmax(150px,1.2fr);gap:9px;margin-top:13px}
+.study-actions button{min-height:46px;padding:10px 12px;border-radius:15px;font-size:12px;font-weight:850}
+#reviewWordButton{border:1px solid #f0d9df;background:#fff7f8;color:#ac6b7d}
+#reviewWordButton.marked{border-color:#e5bf76;background:linear-gradient(135deg,#fff5d5,#fff0df);color:#8b6331}
+.study-footnote{margin:9px 2px 0;color:#a48b92;font-size:10px;text-align:center}
+.quiz-progress{color:#b35f7b;font-size:11px;font-weight:850}
+#quizWord{display:block;margin:16px 0;font-size:clamp(20px,5vw,27px);color:#553943}
+#quizAnswer{width:100%;min-height:48px;margin:7px 0 10px;padding:12px 14px;border:1px solid #ead4dc;border-radius:14px;background:#fff;color:#553943;font:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
+#quizAnswer:focus{border-color:#dd8ca5;box-shadow:0 0 0 4px #e9789a20}
+.quiz-feedback{min-height:22px;margin:8px 0 0;font-size:12px;font-weight:800;color:#bd657d}
+.quiz-feedback.correct{color:#548b6a}
+.challenge-dialog .full-button{width:100%;min-height:46px;margin-top:8px}
+#challengeResultText{line-height:1.6;color:#79646c}
+@media(max-width:600px){.challenge-card{padding:16px!important;border-radius:20px!important}.challenge-progress-wrap{gap:6px;margin:0 0 10px}.challenge-progress{font-size:10px}.word-card,.quiz-card{padding:13px!important;border-radius:15px!important}.word-meaning{font-size:15px!important}.word-example,.word-example-translation{font-size:11px!important}.word-forms{font-size:10px!important}.study-actions{grid-template-columns:1fr;gap:6px;margin-top:9px}.study-actions button{min-height:40px;padding:8px;font-size:11px}.study-footnote{font-size:9px;margin-top:6px}.challenge-card h2{font-size:20px;margin:5px 0}.study-cat{font-size:25px!important}}
+@media(prefers-reduced-motion:reduce){.challenge-progress-track i{transition:none}}

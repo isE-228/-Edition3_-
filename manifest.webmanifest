@@ -1,0 +1,19 @@
+{
+  "id": "./index.html",
+  "name": "小猫家园 · 喵喵合成乐",
+  "short_name": "小猫家园",
+  "description": "一款无需联网、可以合成猫咪的离线小游戏。",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#fff0f4",
+  "theme_color": "#fff0f4",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {"src": "assets/app-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "cat-home.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable"}
+  ]
+}

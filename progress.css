@@ -1,0 +1,61 @@
+/* 成就/记录/背词挑战/复活动画专属样式，均无外部资源依赖。 */
+.mascot-token{position:relative!important;display:grid!important;place-items:center!important;width:39px!important;height:39px!important;flex:0 0 39px!important;overflow:visible!important;border:1px solid #f1d8de!important;border-radius:13px!important;background:linear-gradient(145deg,#fff,#fff1f3)!important;box-shadow:0 3px 9px #8b526216,inset 0 1px #fff!important;color:transparent!important}
+.mascot-token>img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 1px #49354022)}
+.dark .mascot-token{background:linear-gradient(145deg,#59424d,#453540)!important;border-color:#755662!important}
+.journal-card{position:relative;overflow:hidden;padding:12px;border:1px solid #f0d9df!important;border-radius:22px!important;background:linear-gradient(155deg,#fff 0%,#fff8f7 60%,#fff1f3 100%)!important;box-shadow:0 14px 36px #a6537014,inset 0 1px #fff!important}
+.journal-card:before{content:'✦';position:absolute;right:18px;top:12px;color:#edb8a9;font-size:20px;opacity:.72;pointer-events:none}
+.journal-tabs{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:5px;border:1px solid #f3e2e3;border-radius:16px;background:#fdf2f2}
+.journal-tab{min-height:40px;padding:8px 10px;border:0;border-radius:12px;background:transparent;color:#9c7b84;font-size:12px;font-weight:800;transition:color .2s,background .2s,box-shadow .2s,transform .2s}
+.journal-tab:hover{color:#bf657e;transform:translateY(-1px)}
+.journal-tab.active{background:linear-gradient(135deg,#fff,#fff9f6);color:#b44d6c;box-shadow:0 3px 10px #99556818,inset 0 0 0 1px #f3dfe2}
+.journal-tab span{display:inline-grid;min-width:31px;margin-left:3px;padding:2px 6px;border-radius:99px;background:#fce5e9;color:#bd6480;font-size:10px;font-variant-numeric:tabular-nums}
+.journal-panel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:356px;margin-top:11px;padding:1px 3px 3px 1px;overflow:auto;scrollbar-color:#e8bdc6 transparent;scrollbar-width:thin}
+.history-row{position:relative;display:grid;grid-template-columns:31px 1fr auto;align-items:center;gap:9px;min-height:57px;padding:8px 10px;border:1px solid #f1e5e3;border-radius:15px;background:linear-gradient(130deg,#fff 0%,#fffaf6 100%);box-shadow:0 3px 10px #8a5c5410;transition:transform .18s,border-color .18s,box-shadow .18s}
+.history-row:hover{transform:translateY(-2px);border-color:#edcbd1;box-shadow:0 7px 16px #8a5c5418}
+.history-rank{display:grid;place-items:center;width:29px;height:29px;border-radius:10px;background:#f7ece7;color:#9f7b69;font-size:12px;font-weight:900;font-variant-numeric:tabular-nums}
+.history-row:nth-child(1) .history-rank{background:linear-gradient(145deg,#fff0bd,#f4ce70);color:#885d1c}
+.history-row:nth-child(2) .history-rank{background:linear-gradient(145deg,#f7f4f2,#ded9d7);color:#665d61}
+.history-row:nth-child(3) .history-rank{background:linear-gradient(145deg,#ffe1cf,#efb293);color:#885137}
+.history-row strong{color:#b44d6c;font-size:17px;font-weight:900;font-variant-numeric:tabular-nums}
+.history-row strong:after{content:' 鱼干';margin-left:3px;color:#b68d76;font-size:9px;font-weight:700}
+.history-row time{color:#a58b8f;font-size:10px;font-variant-numeric:tabular-nums}
+.achievement-badge{position:relative;display:flex;align-items:center;gap:10px;min-height:66px;padding:9px 10px;border:1px solid #f0e6e4;border-radius:16px;background:linear-gradient(140deg,#fff 0%,#fffaf8 100%);box-shadow:0 3px 10px #885b5b0b;transition:transform .18s,border-color .18s,box-shadow .18s,filter .18s}
+.achievement-badge:hover{transform:translateY(-2px);border-color:#eccbd1;box-shadow:0 8px 17px #885b5b14}
+.achievement-badge .badge-icon{display:grid;flex:0 0 39px;place-items:center;width:39px;height:39px;border:1px solid #f2e4e1;border-radius:13px;background:linear-gradient(145deg,#fff7ed,#fbe6e7);font-size:19px;filter:saturate(.76);transition:transform .2s,filter .2s}
+.achievement-badge:hover .badge-icon{transform:rotate(-5deg) scale(1.06)}
+.achievement-badge>span:last-child{display:grid;min-width:0;gap:3px}
+.achievement-badge strong{color:#846d70;font-size:11px;line-height:1.35}
+.achievement-badge small{color:#aa9695;font-size:9px;line-height:1.45}
+.achievement-badge time{color:#bb9298;font-size:9px}
+.achievement-badge.earned{border-color:#eed4ce;background:linear-gradient(140deg,#fffdf5 0%,#fff5ee 56%,#fff0f3 100%);box-shadow:0 4px 12px #b8856214}
+.achievement-badge.earned .badge-icon{border-color:#f2dcc4;background:linear-gradient(145deg,#fff1c9,#ffe4dd);filter:none;box-shadow:inset 0 1px #fff,0 3px 8px #ae80631a}
+.achievement-badge.earned strong{color:#a45664}
+.achievement-badge.mystery{background:linear-gradient(140deg,#fff,#f8f4f4);border-style:dashed}
+.achievement-badge.mystery .badge-icon{background:#f6f1f1;color:#ad9b9d;font-size:15px}
+.journal-empty{grid-column:1/-1;display:grid;min-height:100px;place-items:center;padding:18px;border:1px dashed #ebd6d9;border-radius:17px;background:linear-gradient(145deg,#fffaf8,#fff1f3);color:#a58389;font-size:12px;text-align:center}
+.dark .journal-card{border-color:#614552!important;background:linear-gradient(155deg,#493943,#3a2d36 72%,#3e303a)!important;box-shadow:0 14px 36px #170e151c,inset 0 1px #715461!important}
+.dark .journal-card:before{color:#c98c9c}
+.dark .journal-tabs{border-color:#614552;background:#392d36}
+.dark .journal-tab{color:#c4a8b0}
+.dark .journal-tab.active{background:linear-gradient(135deg,#5a414d,#493742);color:#ffe1e8;box-shadow:0 3px 10px #20151b55,inset 0 0 0 1px #725562}
+.dark .journal-tab span{background:#684552;color:#ffdce4}
+.dark .history-row,.dark .achievement-badge{border-color:#604955;background:linear-gradient(135deg,#493943,#40323b);box-shadow:0 3px 10px #17101720}
+.dark .history-row:hover,.dark .achievement-badge:hover{border-color:#986779;box-shadow:0 7px 16px #170f1740}
+.dark .history-rank{background:#5a454d;color:#ead0d3}
+.dark .history-row:nth-child(1) .history-rank{background:linear-gradient(145deg,#8b7048,#675134);color:#ffe5a5}
+.dark .history-row:nth-child(2) .history-rank{background:linear-gradient(145deg,#716b70,#51494f);color:#eee1e5}
+.dark .history-row:nth-child(3) .history-rank{background:linear-gradient(145deg,#795644,#603c35);color:#ffd7bb}
+.dark .history-row strong{color:#ffc0d0}
+.dark .history-row strong:after,.dark .history-row time{color:#c6a2ac}
+.dark .achievement-badge .badge-icon{border-color:#694f5a;background:linear-gradient(145deg,#604953,#4c3944)}
+.dark .achievement-badge strong{color:#ead4db}
+.dark .achievement-badge small{color:#c3aab2}
+.dark .achievement-badge time{color:#db9daa}
+.dark .achievement-badge.earned{border-color:#876471;background:linear-gradient(140deg,#58404a,#493943 65%,#543c47)}
+.dark .achievement-badge.earned .badge-icon{border-color:#876474;background:linear-gradient(145deg,#785564,#614451);box-shadow:inset 0 1px #a17c89}
+.dark .achievement-badge.earned strong{color:#ffd4dd}
+.dark .achievement-badge.mystery{background:linear-gradient(140deg,#453740,#3d3039)}
+.dark .achievement-badge.mystery .badge-icon{background:#50404a;color:#c1aab0}
+.dark .journal-empty{border-color:#72505d;background:linear-gradient(145deg,#493943,#3d3039);color:#d0aeb9}
+@media(max-width:520px){.journal-card{padding:10px!important}.journal-panel{grid-template-columns:1fr;max-height:330px}.achievement-badge{min-height:60px}.history-row{min-height:53px}}
+@media(prefers-reduced-motion:reduce){.journal-tab,.history-row,.achievement-badge,.achievement-badge .badge-icon{transition:none}}

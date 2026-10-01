@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 896 128">
+  <defs>
+    <linearGradient id="bluefur" x2="0" y2="1"><stop stop-color="#c8efff"/><stop offset="1" stop-color="#82c9eb"/></linearGradient>
+    <linearGradient id="pinkfur" x2="0" y2="1"><stop stop-color="#ffecf4"/><stop offset="1" stop-color="#ffbdd3"/></linearGradient>
+    <linearGradient id="brownfur" x2="0" y2="1"><stop stop-color="#c78948"/><stop offset="1" stop-color="#8a522a"/></linearGradient>
+    <linearGradient id="whitefur" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#f1eee8"/></linearGradient>
+    <linearGradient id="creamfur" x2="0" y2="1"><stop stop-color="#fff7e9"/><stop offset="1" stop-color="#ebc8a8"/></linearGradient>
+    <filter id="soft"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#58414b" flood-opacity=".22"/></filter>
+  </defs>
+  <!-- 1. 蓝色水滴小猫：对应清透蓝色、简单手绘小猫 -->
+  <g transform="translate(0)">
+    <path d="M20 55 24 28q2-10 12-4l13 9q15-5 30 0l14-9q9-6 11 5l4 26q7 34-19 47-17 9-37 6Q25 101 20 76Z" fill="url(#bluefur)" stroke="#638d9e" stroke-width="4" stroke-linejoin="round" filter="url(#soft)"/>
+    <path d="m30 30 3 17 12-12m48-5-3 17-12-12" fill="#e99d9e" stroke="#638d9e" stroke-width="2.5"/>
+    <ellipse cx="45" cy="59" rx="5" ry="7" fill="#263849"/><ellipse cx="82" cy="59" rx="5" ry="7" fill="#263849"/><circle cx="43" cy="57" r="1.8" fill="white"/><circle cx="80" cy="57" r="1.8" fill="white"/>
+    <path d="m60 68 5-3 5 3-5 4Z" fill="#dc8890"/><path d="M65 72v5m0 0q-5 5-9 0m9 0q5 5 9 0" fill="none" stroke="#536c77" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="m52 69-12-3m12 7-13 2m40-6 12-3m-12 7 13 2" stroke="#6d8d97" stroke-width="1.7" stroke-linecap="round"/>
+  </g>
+  <!-- 2. 粉色泡泡鱼猫：对应粉框大眼、圆润青色身体与腮红 -->
+  <g transform="translate(128)">
+    <path d="M19 56q0-29 23-32l7-11q6-8 12 0l5 8 9-9q7-6 11 4l3 7q22 6 22 33v34q0 14-15 14H35Q19 104 19 90Z" fill="#75d4d5" stroke="#536d70" stroke-width="4" stroke-linejoin="round" filter="url(#soft)"/>
+    <path d="M23 55Q22 29 43 26l8-12 13 12q18-12 29 3 9 12 8 29v16H23Z" fill="url(#pinkfur)" stroke="#536d70" stroke-width="3"/>
+    <ellipse cx="49" cy="57" rx="8" ry="10" fill="white" stroke="#35444b" stroke-width="2.4"/><ellipse cx="79" cy="57" rx="8" ry="10" fill="white" stroke="#35444b" stroke-width="2.4"/>
+    <circle cx="51" cy="58" r="3.3" fill="#26343a"/><circle cx="77" cy="58" r="3.3" fill="#26343a"/><circle cx="50" cy="56" r="1.4" fill="white"/><circle cx="76" cy="56" r="1.4" fill="white"/>
+    <path d="M59 71q5-6 10 0l-5 4Z" fill="#ec8c9b"/><path d="M64 75q-3 5-7 2m7-2q3 5 7 2" fill="none" stroke="#526b70" stroke-width="2"/>
+    <path d="M36 83q12-5 23 0m11 0q11-5 23 0" stroke="#e98ea7" stroke-width="4" stroke-linecap="round"/>
+    <path d="M48 92q16 11 32 0" fill="none" stroke="#3b7776" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- 3. 焦糖熊耳猫：对应棕色毛绒玩偶、圓耳與米色口鼻 -->
+  <g transform="translate(256)">
+    <circle cx="37" cy="31" r="19" fill="#9a6135" stroke="#714525" stroke-width="3"/><circle cx="91" cy="31" r="19" fill="#9a6135" stroke="#714525" stroke-width="3"/><circle cx="37" cy="31" r="9" fill="#d6a075"/><circle cx="91" cy="31" r="9" fill="#d6a075"/>
+    <path d="M19 65Q18 34 64 33t46 32v24q-1 20-46 22Q18 109 19 89Z" fill="url(#brownfur)" stroke="#714525" stroke-width="4" filter="url(#soft)"/>
+    <ellipse cx="65" cy="89" rx="26" ry="17" fill="#f6e6c5"/><circle cx="45" cy="68" r="5" fill="#211b18"/><circle cx="83" cy="68" r="5" fill="#211b18"/>
+    <ellipse cx="64" cy="79" rx="13" ry="10" fill="#f7e8ce"/><ellipse cx="64" cy="76" rx="5" ry="4" fill="#30231d"/><path d="M64 80v4m0 0q-4 4-7 0m7 0q4 4 7 0" fill="none" stroke="#50382b" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- 4. 线稿奶白猫：对应黑色简笔线条、圆脸與招手爪 -->
+  <g transform="translate(384)" fill="url(#whitefur)" stroke="#353538" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M20 64Q21 27 64 27t44 37v26q0 15-17 18H39Q21 106 20 90Z" filter="url(#soft)"/>
+    <path d="M31 37 28 18q-1-6 7-3l14 13m43 9 4-20q1-6-7-3L75 29" fill="none"/>
+    <ellipse cx="48" cy="62" rx="4" ry="6" fill="#353538" stroke="none"/><ellipse cx="80" cy="62" rx="4" ry="6" fill="#353538" stroke="none"/>
+    <path d="M62 73q3-4 6 0l-3 3Zm3 4q-5 7-10 1m10-1q5 7 10 1" fill="#353538" stroke="none"/>
+    <path d="M82 94q7-15 13-7 4 6-2 10 10-7 12 0 2 6-8 8 8 1 5 7-4 7-13 0-11 1-9-7" fill="#fff"/>
+  </g>
+  <!-- 5. 铅笔白云猫：对应软萌白色长耳、淡腮红和星星 -->
+  <g transform="translate(512)">
+    <path d="M24 53Q22 28 42 26q17-3 22 15 4-19 22-17 24 3 18 31l-5 41q-2 15-35 15-33 0-37-17Z" fill="url(#whitefur)" stroke="#aaa6a8" stroke-width="3" stroke-linejoin="round" filter="url(#soft)"/>
+    <path d="M34 44q-5-23 4-27 11-4 13 22m32 1q2-24 12-22 9 2 3 26" fill="none" stroke="#aaa6a8" stroke-width="2.5"/>
+    <ellipse cx="48" cy="65" rx="6" ry="8" fill="white" stroke="#aaa6a8" stroke-width="2"/><ellipse cx="80" cy="65" rx="6" ry="8" fill="white" stroke="#aaa6a8" stroke-width="2"/><circle cx="49" cy="66" r="3" fill="#626168"/><circle cx="79" cy="66" r="3" fill="#626168"/>
+    <path d="M61 77q3-4 6 0l-3 3Z" fill="#e6a0a5"/><path d="M64 80v4m0 0q-4 5-7 1m7-1q4 5 7 1" fill="none" stroke="#88848a" stroke-width="2"/>
+    <ellipse cx="43" cy="80" rx="6" ry="3" fill="#f5c2c7"/><ellipse cx="85" cy="80" rx="6" ry="3" fill="#f5c2c7"/><path d="m108 25 3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#ffd082" stroke="none"/>
+  </g>
+  <!-- 6. 三花奶猫：对应手绘笑脸與小小三角耳 -->
+  <g transform="translate(640)">
+    <path d="M20 63 30 27l23 13q12-8 24 0l23-13 10 36q2 43-45 49Q18 107 20 63Z" fill="#fff3e6" stroke="#4c4747" stroke-width="4" stroke-linejoin="round" filter="url(#soft)"/>
+    <path d="M29 31q9-13 22 9l-15 9Zm57 0Q77 18 66 40l15 9Z" fill="#e58d71"/>
+    <path d="M41 55q8-10 16 0m12 0q8-10 16 0" fill="none" stroke="#403b3d" stroke-width="4" stroke-linecap="round"/><path d="M60 67q4-5 8 0l-4 4Z" fill="#df8d8c"/><path d="M64 71v5m0 0q-6 8-12 0m12 0q6 8 12 0" fill="none" stroke="#403b3d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M40 83q8 12 18 0m12 0q10 12 19 0" fill="none" stroke="#4d4648" stroke-width="3" stroke-linecap="round"/><ellipse cx="39" cy="71" rx="6" ry="3" fill="#f0a0a3"/><ellipse cx="89" cy="71" rx="6" ry="3" fill="#f0a0a3"/>
+  </g>
+  <!-- 7. 粉色手绘小怪猫：对应粉色软糯身体、大眼睛和吐舌头特征 -->
+  <g transform="translate(768)">
+    <path d="M18 53q-8-12 3-17l16-8q5-13 22-13 12-12 25 0 20-2 28 13 16 6 5 20l-2 32q0 22-19 25-15 12-32 0-24 8-39-3-17-4-12-49Z" fill="#ffb7c5" stroke="#342d35" stroke-width="5" stroke-linejoin="round" filter="url(#soft)"/>
+    <path d="M34 49q10-15 23-2 6 12-2 19-12 4-20-4Zm42-2q13-12 23 2 1 14-10 18-12-5-13-20Z" fill="#fff" stroke="#342d35" stroke-width="4"/>
+    <ellipse cx="49" cy="56" rx="5" ry="7" fill="#28232b"/><ellipse cx="86" cy="55" rx="5" ry="7" fill="#28232b"/><circle cx="47" cy="53" r="2" fill="#fff"/><circle cx="84" cy="52" r="2" fill="#fff"/>
+    <path d="M61 69q6-7 13 0l-6 5Z" fill="#e78a9e" stroke="#342d35" stroke-width="2"/><path d="M68 74v7" stroke="#342d35" stroke-width="3"/>
+    <path d="M66 81q-4 7 0 18 5 12 12 6 7-9 0-18l-5-7Z" fill="#62c8c6" stroke="#342d35" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M30 39 23 33m68 2 8-7M34 89l-7 7m65-3 9 5" stroke="#342d35" stroke-width="4" stroke-linecap="round"/>
+    <path d="M27 69q7-4 12 0m50 4q8-4 14 0" stroke="#ea8b9f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
