@@ -503,13 +503,37 @@
     $('endScreen').classList.remove('hidden'); playTone(180, .35, 'sawtooth');
   }
   function normalizeAnswer(value) { return value.toLowerCase().trim().replace(/[.,;!?，。；！？、]/g,'').replace(/\s+/g,' '); }
+  function shuffle(values) {
+    const result=[...values];
+    for(let index=result.length-1;index>0;index--){
+      const swap=Math.floor(Math.random()*(index+1));
+      [result[index],result[swap]]=[result[swap],result[index]];
+    }
+    return result;
+  }
   function beginChallenge() {
     const wordBank=window.WORD_BANK?.length ? window.WORD_BANK : (C.vocabulary?.length ? C.vocabulary : null);
     if(state.reviveUsed) return;
     state.gameOver = true;
     if(!wordBank?.length) { showToast('📚 本地词库没有加载，请重新打开页面再试。', 2400); return; }
-    const pool=[...wordBank]; const picked=[];
-    while(picked.length<10 && pool.length) picked.push(pool.splice(Math.floor(Math.random()*pool.length),1)[0]);
+    const buckets=new Map();
+    for (const word of shuffle(wordBank)) {
+      const initial=String(word.word||'').trim().charAt(0).toLowerCase()||'#';
+      if(!buckets.has(initial)) buckets.set(initial,[]);
+      buckets.get(initial).push(word);
+    }
+    let initials=shuffle([...buckets.keys()]);
+    const picked=[];
+    while(picked.length<Math.min(10,wordBank.length)) {
+      initials=shuffle(initials);
+      for(const initial of initials){
+        if(picked.length>=Math.min(10,wordBank.length))break;
+        const bucket=buckets.get(initial);
+        if(bucket?.length)picked.push(bucket.pop());
+      }
+      initials=initials.filter(initial=>buckets.get(initial)?.length);
+      if(!initials.length)break;
+    }
     state.challenge={words:picked,studyWords:picked,studyIndex:0,questions:[],questionIndex:0,correct:0,passed:false,reviewSet:new Set(),missed:[],retryMode:false,studyStarted:Date.now()};
     $('endScreen').classList.add('hidden'); $('challengeResult').classList.add('hidden'); $('quizStage').classList.add('hidden'); $('studyStage').classList.remove('hidden');
     $('retryMissedButton').classList.add('hidden');
@@ -529,7 +553,7 @@
     $('challengeProgress').textContent=`${challenge.retryMode?'错词复习':'单词学习'} · ${challenge.studyIndex+1} / ${challenge.studyWords.length}`;
     $('studyWord').textContent=word.word; $('studyPhonetic').textContent=word.phonetic; $('studyMeaning').textContent=word.meaning;
     $('studyExample').textContent=word.example; $('studyExampleTranslation').textContent=word.translation; $('studyForms').textContent=`变形：${word.forms}`;
-    $('challengeProgressBar').style.width=`${(challenge.studyIndex/10)*100}%`;
+    $('challengeProgressBar').style.width=`${(challenge.studyIndex/challenge.studyWords.length)*100}%`;
     $('reviewWordButton').classList.toggle('marked',challenge.reviewSet.has(word.word));
     $('reviewWordButton').textContent=challenge.reviewSet.has(word.word)?'🔖 已标记复习':'🔖 加入复习清单';
     $('studyFootnote').textContent=challenge.reviewSet.size?`已标记 ${challenge.reviewSet.size} 个词，抽查时优先复习。`:'标记不熟的词，抽查时会优先复习它们。';
@@ -538,9 +562,9 @@
   function startQuiz() {
     const challenge=state.challenge;
     const marked=challenge.words.filter(word=>challenge.reviewSet.has(word.word));
-    const unmarked=challenge.words.filter(word=>!challenge.reviewSet.has(word.word)).sort(()=>Math.random()-.5);
+    const unmarked=shuffle(challenge.words.filter(word=>!challenge.reviewSet.has(word.word)));
     const questionCount=Math.min(5,challenge.words.length);
-    challenge.questions=[...marked,...unmarked].slice(0,questionCount).map(word=>({word,direction:Math.random()<.5?'en-zh':'zh-en'}));
+    challenge.questions=shuffle([...marked,...unmarked].slice(0,questionCount)).map(word=>({word,direction:Math.random()<.5?'en-zh':'zh-en'}));
     challenge.questionIndex=0; challenge.correct=0; challenge.missed=[];
     $('studyStage').classList.add('hidden'); $('quizStage').classList.remove('hidden'); showQuizQuestion();
   }
